@@ -1,0 +1,55 @@
+Latent Factor Analysis of EPSi Conducted in a Mixed General and Clinical Sample
+Liz Mutina and Madi Augustine
+Khoury College of Computer Science
+Northeastern University
+
+
+The primary objective of this research is to determine a subset of the 64 item EPSi that represent 
+underlying constructs deduced by variable response patterns to facilitate efficient screening at primary 
+care visits. To accomplish this objective we implement exploratory and confirmatory factor analysis and
+utilize clustering methods to identify which questions have the highest impact of the individual scoring 
+positive for psychosis. 
+
+There are 4 python files each with independent purposes: 
+
+File_1of4_data_prep.py
+The purpose of this file is demonstrate how the data was cleaned. NaN values were replaced with participant
+responses from a different time point. The dataframe that results from this file was used through the 
+remaining analysis.
+
+***Required Libraries to Run File 1***
+- pandas
+- numpy 
+
+File_2of4_cleaning_EFA_withCFA_models.py
+The purpose of this file is to complete the factor analysis(FA). First, it checks if the data is a good 
+fit for further anaylsis. If the data can be used for FA it checks which factor the data loads to (factors
+decided based on a scree plot), and removes cross and low loading variables if applicable. It will 
+ultimately produce a clean factor model. 
+
+***Required Libraries to Run File 2***
+- pandas
+- factor_analyzer - for KMO, Bartlett's test, and factor analysis
+- matplotlib
+- semopy - for Stuctural Equation Modeling 
+
+File_3of4_clustering_means&DBSCAN.py
+The purpose of this file is to run the three clustering algorithms(fuzzy clustering, DBSCAN, & GMM)
+and provide visualizations for the models.  
+
+***Required Libraries to Run File 3***
+- numpy
+- pandas
+- matplotlib
+- scikit-fuzzy - for fuzzy clustering logic
+- scikit-learn - for preprocessing and PCA
+
+File_4of4_heatmaps&visuals.py
+The purpose of this code is to generate the visuals utalized throughout the report for loading the 
+factors. 
+
+***Required Libraries to Run File 4***
+- pandas
+- numpy
+- matplotlib 
+- seaborn 
