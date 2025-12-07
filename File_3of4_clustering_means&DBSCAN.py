@@ -13,7 +13,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.mixture import GaussianMixture
 from sklearn.cluster import DBSCAN
-from factor_analyzer import Factor Analyzer
+
 
 def load_data(file):
     t1 = pd.read_csv(file)
